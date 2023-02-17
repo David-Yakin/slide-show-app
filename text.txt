@@ -1,0 +1,19 @@
+{
+  "consol log function": {
+    "prefix": "log",
+    "body": ["console.log(${1:prop})"],
+    "description": "consol log function"
+  },
+  "addEventListener": {
+    "prefix": "adel",
+    "body": [
+      "${1:DOM_ELEMENT}.addEventListener(\"${2:click}\", ($3) => ${4:functionName}(${5:attribute}));"
+    ],
+    "description": "addEventListener"
+  },
+  "getElementById": {
+    "prefix": "gebi",
+    "body": ["export const ${1:ELEMENT} = document.getElementById(\"$2\");"],
+    "description": "getElementById"
+  }
+}

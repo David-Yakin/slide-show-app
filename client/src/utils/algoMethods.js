@@ -6,10 +6,6 @@ export function getByQsAll(selector, parent = document) {
   return [...parent.querySelectorAll(selector)];
 }
 
-export function getById(id) {
-  document.getElementById(id);
-}
-
 export function setSleep(duration) {
   return new Promise((resolve, reject) => {
     setTimeout(resolve, duration);
@@ -48,20 +44,21 @@ export function sortReverseArrayOfObject(array, key) {
 
 export const filterArrayOfObjectsByTerm = (term, array, key) => {
   const searchTerm = term.trim();
-  const arrayFiltered = array.filter((item) => {
-    return item[key].toLowerCase().includes(searchTerm.toLowerCase());
+  const arrayFiltered = array.filter(object => {
+    return object[key].toLowerCase().includes(searchTerm.toLowerCase());
   });
   return arrayFiltered;
 };
 
 export const generateUniqNumber = (array, key) => {
   const random = randomNumBetween(1_000_000, 9_999_999);
-  const item = array.findIndex((item) => item[key] === random);
+  const item = array.findIndex(item => item[key] === random);
   if (item === -1) return random;
   generateUniqNumber(array, key);
 };
 
-export const makeFirstLetterCapital = (string) => {
+export const makeFirstLetterCapital = string => {
   const term = string.toLowerCase().trim();
   return term.charAt(0).toUpperCase() + term.slice(1);
 };
+

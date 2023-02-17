@@ -35,8 +35,9 @@
         class="navbar navbar-expand-lg navbar-dark bg-dark"
         aria-label="Fifth navbar example"
       >
-        <div class="container-fluid">
+        <div class="container">
           <span id="home-link" class="navbar-brand cursor">SSA</span>
+
           <button
             class="navbar-toggler collapsed"
             type="button"
@@ -128,122 +129,122 @@
     <main>
       <!-- דף הבית -->
       <div id="home-page" class="d-block">
-        <!-- כותרות דף הבית -->
-        <div class="center mt-4">
-          <div class="col-12 col-md-10 col-xl-8">
-            <h1 id="home-page-title" class="text-center display-4">
-              HOME PAGE
-            </h1>
-            <h2 id="home-page-subtitle" class="fs-5">
-              Here you can look at your pictures throw slide show or list
-            </h2>
-            <hr />
-          </div>
-        </div>
+        <div class="container">
+          <div class="d-flex justify-content-between">
+            <div>
+              <i id="slider-icon" class="bi bi-images fs-3 p-1 cursor"></i>
+              <i id="table-icon" class="bi bi-table fs-3 p-1 cursor"></i>
+              <i
+                id="cards-icon"
+                class="bi bi-grid-3x3-gap-fill cursor fs-3 p-1"
+              ></i>
+            </div>
 
-        <!-- שדה חיפוש -->
-        <div id="search-bar-container">
-          <div class="container mb-2">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search picture by title"
-              id="search-input"
-            />
-          </div>
-        </div>
-
-        <!-- תצוגת מידע -->
-        <div id="data-container" class="d-block">
-          <!-- בקרי תצוגה -->
-          <div class="container mb-2">
-            <div class="d-flex justify-content-between">
-              <div>
-                <i id="slider-icon" class="bi bi-images fs-3 p-1 cursor"></i>
-                <i id="table-icon" class="bi bi-table fs-3 p-1 cursor"></i>
-                <i
-                  id="cards-icon"
-                  class="bi bi-grid-3x3-gap-fill cursor fs-3 p-1"
-                ></i>
-              </div>
-
-              <div>
-                <i
-                  id="sort-down-icon"
-                  class="bi bi-sort-alpha-down-alt fs-3 p-1 cursor"
-                ></i>
-                <i
-                  id="sort-up-icon"
-                  class="bi bi-sort-alpha-down fs-3 p-1 cursor"
-                ></i>
-              </div>
+            <div>
+              <i
+                id="sort-down-icon"
+                class="bi bi-sort-alpha-down-alt fs-3 p-1 cursor"
+              ></i>
+              <i
+                id="sort-up-icon"
+                class="bi bi-sort-alpha-down fs-3 p-1 cursor"
+              ></i>
             </div>
           </div>
 
-          <!-- מצגת תמונות -->
-          <div id="slider-container" class="d-block">
-            <div class="center">
-              <div class="col-12 col-md-8 col-xl-6 col-xxl-5">
-                <figure>
-                  <img
-                    src="..."
-                    alt="..."
-                    class="img-fluid"
-                    id="slider-image"
-                  />
-                  <figcaption>
-                    Photographed by: <span id="slider-credits">...</span>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div class="center mb-4">
-              <div id="slider-prev-btn" class="btn btn-outline-dark mx-2">
-                Prev
-              </div>
-              <div id="slider-next-btn" class="btn btn-outline-dark mx-2">
-                Next
-              </div>
-            </div>
-          </div>
-
-          <!-- טבלה -->
-          <div id="table-container" class="d-block">
-            <table class="table container">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Image</th>
-                  <th>Src</th>
-                  <th>Title</th>
-                  <th>Credits</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
-                </tr>
-              </thead>
-              <tbody id="tbody"></tbody>
-            </table>
-          </div>
-
-          <!-- כרטיסים -->
-          <div id="cards-container" class="d-none">
-            <div class="container">
-              <div id="cards" class="row"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- תצוגת אין מידע -->
-        <div id="no-data-container" class="d-none">
+          <!-- כותרות דף הבית -->
           <div class="center mt-4">
             <div class="col-12 col-md-10 col-xl-8">
+              <h1 class="display-4">HOME PAGE</h1>
               <h2 class="fs-5">
-                Opss... It seems that there are no pictures to show
+                Here you can look at your pictures throw slide show or list
               </h2>
-              <p id="goto-create-pic-page-link" class="cursor text-primary">
-                click here to add a new picture...
-              </p>
+              <hr />
+            </div>
+          </div>
+
+          <!-- שדה חיפוש -->
+          <div id="search-bar-container">
+            <div class="container mb-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search picture by title"
+                id="search-input"
+              />
+            </div>
+          </div>
+
+          <!-- תצוגת מידע -->
+          <div id="data-container" class="d-block">
+            <!-- בקרי תצוגה -->
+            <div class="container mb-2">
+              <!-- מצגת תמונות -->
+              <div id="slider-container" class="d-block">
+                <div class="center">
+                  <div class="col-12 col-md-8 col-xl-6 col-xxl-5">
+                    <figure>
+                      <img
+                        src="..."
+                        alt="..."
+                        class="img-fluid"
+                        id="slider-image"
+                      />
+                      <figcaption>
+                        Photographed by: <span id="slider-credits">...</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+                <div class="center mb-4">
+                  <div id="slider-prev-btn" class="btn btn-outline-dark mx-2">
+                    Prev
+                  </div>
+                  <div id="slider-next-btn" class="btn btn-outline-dark mx-2">
+                    Next
+                  </div>
+                </div>
+              </div>
+
+              <!-- טבלה -->
+              <div id="table-container" class="d-block">
+                <table class="table container">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Image</th>
+                      <th>Src</th>
+                      <th>Title</th>
+                      <th>Credits</th>
+                      <th>Edit</th>
+                      <th>Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody"></tbody>
+                </table>
+              </div>
+
+              <!-- כרטיסים -->
+              <div id="cards-container" class="d-none">
+                <div class="container">
+                  <div id="cards" class="row"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- תצוגת אין מידע -->
+            <div id="no-data-container" class="d-none">
+              <div class="center mt-4">
+                <div class="col-12 col-md-10 col-xl-8">
+                  <h2 class="fs-5">
+                    Opss... It seems that there are no pictures to show
+                  </h2>
+                  <p id="goto-create-pic-page-link" class="cursor text-primary">
+                    click here to add a new picture...
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
